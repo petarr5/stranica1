@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+	<meta charset="UTF-8" />
+	<script>
+	function provjera(broj){
+	var i;
+	if(broj==1)
+	return false;
+	for(i=2;i<broj;i++)
+	if(broj%i==0)
+	return false;
+	return true;
+	}
+	var n;
+    for(n=1;n<=1000;n++)
+	    if(provjera(n)==true){
+		document.write(n+"<br/>");
+		console.log(n);
+		}
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

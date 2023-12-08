@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8" />
+    <script>
+        function generirajNasumicneBrojeve(broj1, broj2) {
+
+            for (let i = 0; i < 5; i++) {
+                const nasumicniBroj = Math.floor(Math.random() * (broj2 - broj1 + 1) + broj1);
+                document.write(nasumicniBroj + "<br/>");
+            }
+        }
+
+        var i = prompt("Unesite prvi broj");
+        var j = prompt("Unesite drugi broj");
+        generirajNasumicneBrojeve(parseFloat(i), parseFloat(j));
+    </script>
+</head>
+<body>
+</body>
+</html>

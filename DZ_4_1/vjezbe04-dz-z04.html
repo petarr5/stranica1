@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+	<meta charset="UTF-8" />
+	<script>
+	var polje=new Array(1,2,3,4,7,8,5,6,9,55,12,4,85);
+	var polje2=new Array("Banana","Orange","Apple"," Mango");
+	var polje_final=polje+polje2;
+	document.write("Ispis dužine polja: "+polje.length+"<br/>");
+	var kopija;
+	var i,j;
+	for(i=0;i<polje.length-1;i++)
+		for(j=i+1;j<polje.length;j++)
+			if(polje[i]<polje[j]){
+			var pom=polje[i];
+			polje[i]=polje[j];
+			polje[j]=pom;
+			}
+	document.write("Ispis  polja (od najvećeg do najmanjeg):<br/>");
+	for(i=0;i<polje.length;i++)
+		document.write(polje[i]+" ");
+	document.write("<br/>Ispis  polja (od najmanjeg do najvećeg):<br/>");
+	for(i=polje.length-1;i>=0;i--)
+		document.write(polje[i]+" ");
+	kopija=polje.slice(1,polje.length);
+	document.write("<br/>Ispis  polja (bez zadnjeg člana):<br/>");
+	for(i=kopija.length-1;i>=0;i--)
+		document.write(kopija[i]+" ");
+	kopija.push(19,22);
+	document.write("<br/>Ispis  polja (s nova dva člana):<br/>");
+	for(i=kopija.length-1;i>=0;i--)
+		document.write(kopija[i]+" ");
+	document.write("<br/>Ispis  polja (polj_final):<br/>");
+	for(i=0;i<polje_final.length;i++)
+		document.write(polje_final[i]);	
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

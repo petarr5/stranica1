@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+	<meta charset="UTF-8" />
+	<script>
+	
+	function obrada(tempDay){
+		var novi=new Array();
+		var i,j=0;
+		for(i=0;i<tempDay.length;i++){
+			if(!isNaN(tempDay[i])){
+				novi[j]=tempDay[i];
+				j++;
+				}
+			else
+			document.write("Datum: "+tempDay[i]+"<br/>");
+			}
+		var naj=novi[0];
+		var najm=novi[0];
+		for(i=0;i<novi.length;i++){
+			if(naj<novi[i])
+				naj=novi[i];
+			if(najm>novi[i])
+				najm=novi[i];
+				}
+		var suma=0;
+		for(i=0;i<novi.length;i++)
+			suma+=novi[i];
+		document.write("Najveca temp: "+ naj+"<br/>Najmanja temp: "+najm+"<br/>Srednja temp: "+(suma/novi.length));
+		
+	
+	}
+	const tempDay=['2023-11-29', -1, 0, -0.5,0.5, 0, 1.2,1.8,2, 3, 4, 6, 9, 12, 7, 6, 6,8,5,4,2,3,2,1,0];
+	obrada(tempDay);
+
+    
+	
+	
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

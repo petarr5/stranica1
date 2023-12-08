@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+	<meta charset="UTF-8" />
+	<script>
+	function osoba(ime,prezime,godine,bojaociju){
+	this.ime=ime;
+	this.prezime=prezime;
+	this.godine=godine;
+	this.bojaociju=bojaociju;
+	}
+	var osoba1=new osoba("Marko","Marić",40,"black");
+	var osoba2=new osoba("Mate","Matić",50,"zelena");
+    var osoba3=new osoba("Ivo","Ivić",60,"plava");
+	var osobe=new Array(osoba1,osoba2,osoba3);
+    for(var i=0;i<osobe.length;i++){
+		document.write("Ime: "+osobe[i].ime+"<br/> Prezime: "+osobe[i].prezime+" <br/>Godine: "+osobe[i].godine+" <br/>Boja ociju: "+osobe[i].bojaociju+"<br/>"
+		+"Indeks: "+i);
+	document.write("<br/>----------------------------------------<br/>");
+	}
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

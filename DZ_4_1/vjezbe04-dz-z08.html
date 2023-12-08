@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+	<meta charset="UTF-8" />
+	<script>
+	function provjera(reci){
+	var kopija =reci.toUpperCase()
+	var i,j;
+	for(i=0;i<reci.length;i++)
+		for(j=0;j<kopija.length;j++)
+			if(reci[i]==kopija[j])
+				return true;
+		return false;
+	}
+	function fula(rec){
+	return rec.length>=5||provjera(rec)==true;
+	}
+	
+	var arr=["Ovo", "je", "My", "prv", "komad", "OF", "JAVASCRIPT", "koda", "Koji",  "je", "proradio"];
+    var novi=arr.filter(fula);
+	document.write(novi);
+	
+	
+	</script>
+	</head>
+	<body>
+	</body>
+</html>

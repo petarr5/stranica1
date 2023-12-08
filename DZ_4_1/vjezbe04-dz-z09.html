@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+	<head>
+	<meta charset="UTF-8" />
+	<script>
+	function provjera(broj){
+	var suma=0,n;
+	for(n=1;n<broj;n++)
+		if(broj%n==0)
+			suma+=n;
+	if(suma==broj)
+		return true;
+	else
+		return false;
+	}
+	var i;
+	i=prompt("Unesite jedan cijeli broj");
+	if(provjera(i)==true)
+		document.write("Uneseni "+ i + " broj je savrsen");
+	else
+		document.write("Unesni broj nije savrsen");
+	</script>
+	</head>
+	<body>
+	</body>
+</html>
