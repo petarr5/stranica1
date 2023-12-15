@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<script>
+function pis(){
+var i=document.getElementById("tekst").value;
+console.log("--------------------------------");
+if(i=="5")
+document.getElementById("ispa").innerHTML="Odlican";
+else if(i=="4")
+document.getElementById("ispa").innerHTML="Vrlo dobar";
+else if(i=="3")
+document.getElementById("ispa").innerHTML="Dobar";
+else if(i=="2")
+document.getElementById("ispa").innerHTML="Dovoljan";
+else
+document.getElementById("ispa").innerHTML="Neodvoljan";
+
+}
+</script>
+</head>
+<body>
+<form>
+<textarea id="tekst"></textarea>
+<br/>
+<input type="button" value="Podnesi" onclick="pis()">
+<p id="ispa"></p>
+</form>
+</body>
+</html>

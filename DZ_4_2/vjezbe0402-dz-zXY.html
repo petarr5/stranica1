@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ln="hr">
+<head>
+<script>
+function promjeni(){
+if(document.getElementById("prva").src.includes("offp.png")){
+document.getElementById("prva").src="onp.png";
+document.getElementById("druga").src="onz.png";
+}
+else if(document.getElementById("prva").src.includes("onp.png"))
+{
+document.getElementById("prva").src="offp.png";
+document.getElementById("druga").src="offz.png";
+}
+
+}
+</script>
+</head>
+<body>
+<img src="offp.png" width="200px" height="300px" onclick="promjeni()" id="prva">
+<img src="offz.png" width="200px" height="300px" id="druga">
+</body>
+</html>

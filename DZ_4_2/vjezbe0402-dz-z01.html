@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<script>
+var unos,j=0,i,umnozak=1;
+var brojevi=new Array();
+unos=prompt("Unesite brojeve: ");
+var unos2=unos.split(',');
+for(i=0;i<unos2.length;i++)
+	brojevi[i]=parseInt(unos2[i]);
+var suma=0;
+for(i=0;i<brojevi.length;i++)
+	suma+=brojevi[i];
+document.write("Arimeticka sredina unesenih brojeva iznosi: " +(suma/brojevi.length)+"<br/>");
+for(i=0;i<brojevi.length;i++)
+	umnozak*=(brojevi[i])
+document.write("Geometrijska sredina unesenih brojeva iznosi: " +(Math.pow(umnozak,1/brojevi.length)));
+</script>
+</head>
+<body>
+</body>
+</html>

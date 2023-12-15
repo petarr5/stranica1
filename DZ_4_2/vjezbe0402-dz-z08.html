@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <script>
+        function calculate(operation) {
+            var result;
+            var number = parseFloat(document.getElementById("number").value);
+
+            switch (operation) {
+                case 'sin':
+                    result = Math.sin(number);
+                    break;
+                case 'cos':
+                    result = Math.cos(number);
+                    break;
+                case 'tan':
+                    result = Math.tan(number);
+                    break;
+                case 'log':
+                    result = Math.log(number);
+                    break;
+                case 'log10':
+                    result = Math.log10(number);
+                    break;
+                case 'sqr':
+                    result = Math.pow(number, 2);
+                    break;
+                case 'cube':
+                    result = Math.pow(number, 3);
+                    break;
+                case 'sqrt':
+                    result = Math.sqrt(number);
+                    break;
+                default:
+                    alert('Invalid operation');
+                    return;
+            }
+
+            document.getElementById("result").value = result.toFixed(4);
+        }
+    </script>
+</head>
+<body>
+    <div id="calculator">
+        <label for="number">Unesite broj:</label>
+        <input type="text" id="number" placeholder="Unesite broj">
+        <br>
+        <input type="button" value="sin" onclick="calculate('sin')">
+        <input type="button" value="cos" onclick="calculate('cos')">
+        <input type="button" value="tan" onclick="calculate('tan')">
+        <br>
+        <input type="button" value="log" onclick="calculate('log')">
+        <input type="button" value="log10" onclick="calculate('log10')">
+        <input type="button" value="sqr" onclick="calculate('sqr')">
+        <br>
+        <input type="button" value="cube" onclick="calculate('cube')">
+        <input type="button" value="sqrt" onclick="calculate('sqrt')">
+        <input type="button" value="Clear" onclick="clearResult()">
+        <br>
+        <label for="result">Rezultat:</label>
+        <input type="text" id="result" readonly>
+    </div>
+</body>
+</html>

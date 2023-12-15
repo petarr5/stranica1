@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <script>
+        function zbroji() {
+            var prviBroj = parseFloat(document.getElementById("broj1").value);
+            var drugiBroj = parseFloat(document.getElementById("broj2").value);
+
+            if (!isNaN(prviBroj) && !isNaN(drugiBroj)) {
+                var rezultat = prviBroj + drugiBroj;
+                document.getElementById("rezultat").value = rezultat;
+            } else {
+                alert("Molimo unesite ispravne brojeve.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="broj1">x:</label>
+        <input type="text" id="broj1" name="broj1" required>
+        <br/>
+        <label for="broj2">y:</label>
+        <input type="text" id="broj2" name="broj2" required>
+        <br/>
+        <input type="button" value="Zbroji" onclick="zbroji()">
+        <br/>
+        <label for="rezultat">Rezultat:</label>
+        <input type="text" id="rezultat" name="rezultat" readonly>
+    </form>
+</body>
+</html>

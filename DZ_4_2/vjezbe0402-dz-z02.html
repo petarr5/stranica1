@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <title>Promijeni Pozadinu</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Funkcija za generiranje slučajne boje u rasponu od #000000 do #FFFFFF
+            function generirajSlucajnuBoju() {
+                var boja = "#";
+                for (var i = 0; i < 6; i++) {
+                    var randomBroj = Math.floor(Math.random() * 16);
+                    boja += randomBroj.toString(16);
+                }
+                return boja;
+            }
+
+            // Funkcija za promjenu pozadine i ispis trenutne boje
+            function promijeniPozadinu() {
+                var novaBoja = generirajSlucajnuBoju();
+                document.body.style.backgroundColor = novaBoja;
+                document.getElementById("trenutnaBoja").innerHTML = "Trenutna boja: " + novaBoja;
+            }
+
+            // Dodavanje event listenera na dugme
+            document.getElementById("promijeniPozadinuBtn").addEventListener("click", promijeniPozadinu);
+        });
+    </script>
+</head>
+<body>
+    <button id="promijeniPozadinuBtn">Promijeni pozadinu</button>
+    <div id="trenutnaBoja"></div>
+</body>
+</html>

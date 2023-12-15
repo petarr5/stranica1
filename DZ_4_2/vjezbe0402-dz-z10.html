@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+function dodajNoviParagraf() {
+
+    var noviParagraf = document.createElement("p");
+    noviParagraf.textContent = "Novi paragraf teksta";
+
+
+    var mjestoZaNoviParagraf = document.getElementById("ova");
+
+
+    mjestoZaNoviParagraf.parentNode.insertBefore(noviParagraf, mjestoZaNoviParagraf.nextSibling);
+}
+</script>
+</head>
+<body>
+    <p><a href="#" onclick="dodajNoviParagraf()">Kliknite ovdje da dodate novi paragraf teksta</a></p>
+    <p id="ova">Novi paragrafi teksta će se pojaviti ispod</p>
+    <p>Ovo je defaultni prvi paragraf teksta</p>
+</body>
+</html>

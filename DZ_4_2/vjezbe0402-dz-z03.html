@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<script>
+function pis(){
+var i=document.getElementById("tekst").value;
+console.log("--------------------------------");
+if(i=="5")
+alert("Odlican");
+else if(i=="4")
+alert("Vrlo dobar");
+else if(i=="3")
+alert("Dobar");
+else if(i=="2")
+alert("Dovoljan");
+else
+alert("Nedovoljan");
+
+}
+</script>
+</head>
+<body>
+<form>
+<textarea id="tekst"></textarea>
+<br/>
+<input type="button" value="Podnesi" onclick="pis()">
+</form>
+</body>
+</html>
